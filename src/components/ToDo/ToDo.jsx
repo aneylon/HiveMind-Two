@@ -9,15 +9,17 @@ export const ToDo = () => {
   const [newItem, setNewItem] = useState("");
   const AddToDoItem = (event) => {
     event.preventDefault();
-    SetToDoItems([
-      ...ToDoItems,
-      {
-        id: ToDoItems.length + 1,
-        title: newItem,
-        completed: false,
-      },
-    ]);
-    setNewItem("");
+    if (newItem !== "") {
+      SetToDoItems([
+        ...ToDoItems,
+        {
+          id: ToDoItems.length + 1,
+          title: newItem,
+          completed: false,
+        },
+      ]);
+      setNewItem("");
+    }
   };
   return (
     <>
