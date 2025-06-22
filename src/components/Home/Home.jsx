@@ -1,10 +1,12 @@
 import { ToDo } from "../ToDo/ToDo";
 import { NewsCard } from "../News/NewsCard";
 import { Note } from "../Notes/Note";
+import { EnforcerNames } from "../Random/EnforcerNames";
 export const Home = () => {
   return (
     <>
       <h1>Home</h1>
+      <EnforcerNames />
       <Note
         note={{
           id: 3,
