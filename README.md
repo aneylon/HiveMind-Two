@@ -1,11 +1,19 @@
 # Running the project
 
-`npm run dev`
+- To run the front end. `npm run dev`
+- To run the development server `npm run devServe`
 
 # Resources
 
 - [React](https://react.dev/)
 - [Vite](https://vite.dev/)
+
+## Development
+
+- [JSON Server](https://github.com/typicode/json-server)
+
+<details>
+<summary>View things</summary>
 
 # React + Vite
 
@@ -19,3 +27,5 @@ Currently, two official plugins are available:
 ## Expanding the ESLint configuration
 
 If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+<details>

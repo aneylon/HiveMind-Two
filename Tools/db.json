@@ -1,0 +1,27 @@
+{
+  "news": [
+    { "id": 3, "text": "Stuff", "title": "Make Note" },
+    { "id": 7, "text": "Things", "title": "Thing a ma jig" },
+    { "id": 12, "text": "Whatever", "title": "Whatever" }
+  ],
+  "note": [
+    {
+      "id": 5,
+      "title": "New update",
+      "date": "12/23/25",
+      "info": "Added a news card component"
+    },
+    {
+      "id": 3,
+      "title": "Did a thing",
+      "date": "03/04/24",
+      "info": "JSON Server for dev"
+    },
+    {
+      "id": 1,
+      "title": "Stuff Happened",
+      "date": "07/29/2023",
+      "info": "Started!"
+    }
+  ]
+}
