@@ -3,6 +3,7 @@ import { ToDo } from "../ToDo/ToDo";
 import { NewsCard } from "../News/NewsCard";
 import { Note } from "../Notes/Note";
 import { EnforcerNames } from "../Random/EnforcerNames";
+import { About } from "../About/About";
 export const Home = () => {
   const url = "http://localhost:3000";
 
@@ -34,6 +35,7 @@ export const Home = () => {
   return (
     <>
       <h1>Home</h1>
+      <About />
       <EnforcerNames />
       <Note
         note={{
