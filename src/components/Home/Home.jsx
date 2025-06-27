@@ -4,6 +4,7 @@ import { NewsCard } from "../News/NewsCard";
 import { Note } from "../Notes/Note";
 import { EnforcerNames } from "../Random/EnforcerNames";
 import { About } from "../About/About";
+import { FAQ } from "../FAQ/FAQ";
 export const Home = () => {
   const url = "http://localhost:3000";
 
@@ -36,6 +37,7 @@ export const Home = () => {
     <>
       <h1>Home</h1>
       <About />
+      <FAQ />
       <EnforcerNames />
       <Note
         note={{

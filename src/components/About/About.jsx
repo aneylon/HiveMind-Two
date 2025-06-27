@@ -9,10 +9,6 @@ export const About = () => {
       <p>
         Frequently asked questions can be found <a href="/about">here</a>.
       </p>
-      <p>
-        Frequently asked questions can be found{" "}
-        <a href="/abouthttps://github.com/aneylon/HiveMind-Two">here</a>.
-      </p>
       <h2>Bug Report : </h2>
       <textarea
         name="bugReport"
