@@ -1,3 +1,7 @@
+# ToDo List
+
+- [ ] Add testing framework
+
 # Running the project
 
 - To run the front end. `npm run dev`
