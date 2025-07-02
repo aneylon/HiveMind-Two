@@ -1,6 +1,22 @@
 # ToDo List
 
-- [ ] Add testing framework
+- [ ] Add Testing framework
+- [ ] Add Router
+- [ ] Add Redux
+
+- [ ] Todo List
+- [ ] News List
+- [ ] Notes List
+- [ ] Card Component
+
+- [ ] Auth
+
+  - [ ] Signin
+  - [ ] Signout
+  - [ ] Signup
+
+- [ ] Admin section
+  - [ ] News - CRUD
 
 # Running the project
 
