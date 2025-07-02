@@ -1,11 +1,8 @@
 import { useEffect, useState } from "react";
-import { ToDo } from "../ToDo/ToDo";
 import { NewsCard } from "../News/NewsCard";
-import { Note } from "../Notes/Note";
-import { EnforcerNames } from "../Random/EnforcerNames";
 import { About } from "../About/About";
 import { FAQ } from "../FAQ/FAQ";
-import { LandOfEem } from "../LandOfEem/LandOfEem";
+import { Tools } from "../Tools/Tools";
 export const Home = () => {
   const url = "http://localhost:3000";
 
@@ -37,19 +34,6 @@ export const Home = () => {
   return (
     <>
       <h1>Home</h1>
-      <LandOfEem />
-      <About />
-      <FAQ />
-      <EnforcerNames />
-      <Note
-        note={{
-          id: 3,
-          text: "stuff",
-          title: "Make Note",
-          save: (id, note) => console.log({ id, note }),
-        }}
-      />
-      <ToDo />
       <NewsCard
         news={{
           title: "New update",
@@ -57,6 +41,9 @@ export const Home = () => {
           info: "Added a news card component",
         }}
       />
+      <Tools />
+      <About />
+      <FAQ />
     </>
   );
 };
