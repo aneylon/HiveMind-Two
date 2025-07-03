@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { NewsCard } from "./NewsCard";
 import { PuffLoader } from "react-spinners";
+import { Loader } from "../Loaders";
 
 export const NewsList = () => {
   const url = "http://localhost:3000";
@@ -21,7 +22,8 @@ export const NewsList = () => {
   return (
     <div>
       <h1>News List</h1>
-      {!newsItems && <PuffLoader />}
+      <Loader />
+      {!newsItems && <Loader />}
       {newsItems && (
         <ul>
           {newsItems.map((item, i) => (

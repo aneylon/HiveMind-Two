@@ -27,6 +27,7 @@
 
 - [React](https://react.dev/)
 - [Vite](https://vite.dev/)
+- [React Spinners](https://www.davidhu.io/react-spinners/)
 
 ## Development
 
