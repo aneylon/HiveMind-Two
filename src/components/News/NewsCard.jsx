@@ -1,9 +1,9 @@
 export const NewsCard = ({ news }) => {
   return (
     <div>
-      <h1>{news.title}</h1>
+      <h3>{news.title}</h3>
       <p>{news.date}</p>
-      <p>{news.info}</p>
+      <p>{news.text}</p>
     </div>
   );
 };

@@ -1,8 +1,13 @@
 {
   "news": [
-    { "id": 3, "text": "Stuff", "title": "Make Note" },
-    { "id": 7, "text": "Things", "title": "Thing a ma jig" },
-    { "id": 12, "text": "Whatever", "title": "Whatever" }
+    { "id": 3, "text": "Stuff", "title": "Make Note", "date": "01/01/25" },
+    {
+      "id": 7,
+      "text": "Things",
+      "title": "Thing a ma jig",
+      "date": "01/01/25"
+    },
+    { "id": 12, "text": "Whatever", "title": "Whatever", "date": "01/01/25" }
   ],
   "note": [
     {
