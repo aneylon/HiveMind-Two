@@ -3,6 +3,7 @@
 - [ ] Add Testing framework
 - [ ] Add Router
 - [ ] Add Redux
+- [ ] Add MUI or other styling
 
 - [ ] Todo List
 - [ ] News List
