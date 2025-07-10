@@ -1,11 +1,12 @@
 import { useState } from "react";
 
-export const Note = ({ note }) => {
-  const [noteText, setNoteText] = useState(note.text);
+export const Note = ({ note, save }) => {
+  const [noteText, setNoteText] = useState(note.info);
   const [showEdit, setShowEdit] = useState(false);
   return (
     <div>
       <h1>{note.title}</h1>
+      <h3>{note.date}</h3>
       {!showEdit && (
         <div>
           <p onClick={() => setShowEdit(true)}>{noteText}</p>
@@ -22,7 +23,9 @@ export const Note = ({ note }) => {
           <button
             onClick={() => {
               setShowEdit(false);
-              note.save(note.id, noteText);
+              let date = new Date();
+              let dateParts = `${date.getMonth()}/${date.getDay()}/${date.getFullYear()}`;
+              save({ ...note, info: noteText, date: dateParts });
             }}
           >
             save
