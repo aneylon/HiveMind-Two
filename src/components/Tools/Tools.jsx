@@ -8,7 +8,7 @@ export const Tools = () => {
   return (
     <div>
       <h1>Tools</h1>
-      <Terminal />
+      {/* <Terminal />
       <ToDo />
       <EnforcerNames />
       <Note
@@ -18,7 +18,7 @@ export const Tools = () => {
           title: "Make Note",
           save: (id, note) => console.log({ id, note }),
         }}
-      />
+      /> */}
       <LandOfEem />
     </div>
   );

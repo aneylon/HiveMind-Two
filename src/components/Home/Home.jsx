@@ -25,13 +25,13 @@ export const Home = () => {
   return (
     <>
       <h1>Home</h1>
-      <SignUp />
+      <Tools />
+      {/* <SignUp />
       <SignIn />
       <SignOut />
       <NewsList />
-      <Tools />
       <About />
-      <FAQ />
+      <FAQ /> */}
     </>
   );
 };

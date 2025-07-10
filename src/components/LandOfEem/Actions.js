@@ -21,24 +21,26 @@ function RollDisadvantage(DiceSize) {
 }
 
 function Check(modifier) {
-  if (modifier === null || modifier === undefined) modifier = 0;
+  if (modifier === null || modifier === undefined || isNaN(modifier))
+    modifier = 0;
   if (modifier < -3) modifier = -3;
   if (modifier > 4) modifier = 4;
-  let roll = randomMax(12) + modifier;
-  let result = { number: roll };
-  if (roll === 1 || roll === 2) {
+  let roll = randomMax(12);
+  let total = roll + modifier;
+  let result = { number: total, modifier, breakOut: `${roll} + ${modifier}` };
+  if (total === 1 || total === 2) {
     return { ...result, description: "Complete Failure" };
   }
-  if (roll >= 3 && roll <= 5) {
+  if (total >= 3 && total <= 5) {
     return { ...result, description: "Failure with a plus" };
   }
-  if (roll >= 6 && roll <= 8) {
+  if (total >= 6 && total <= 8) {
     return { ...result, description: "Success with a twist" };
   }
-  if (roll >= 9 && roll <= 11) {
+  if (total >= 9 && total <= 11) {
     return { ...result, description: "Success" };
   }
-  if (roll >= 12) {
+  if (total >= 12) {
     return { ...result, description: "Complete Success" };
   }
 }
