@@ -8,18 +8,11 @@ export const Tools = () => {
   return (
     <div>
       <h1>Tools</h1>
-      {/* <Terminal />
       <ToDo />
+      {/* <Terminal />
       <EnforcerNames />
-      <Note
-        note={{
-          id: 3,
-          text: "stuff",
-          title: "Make Note",
-          save: (id, note) => console.log({ id, note }),
-        }}
-      /> */}
       <LandOfEem />
+      /> */}
     </div>
   );
 };

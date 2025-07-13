@@ -11,10 +11,10 @@ export const Home = () => {
   return (
     <>
       <h1>Home</h1>
-      <NoteList />
-      {/* <SignUp />
-      <NewsList />
       <Tools />
+      {/* <SignUp />
+      <NoteList />
+      <NewsList />
       <SignIn />
       <SignOut />
       <About />

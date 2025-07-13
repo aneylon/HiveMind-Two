@@ -1,26 +1,54 @@
-import { useState } from "react";
-const startTodoItems = [
-  { id: 1, title: "one", completed: false },
-  { id: 2, title: "two", completed: true },
-  { id: 3, title: "three", completed: false },
-];
+import { useEffect, useState } from "react";
+
 export const ToDo = () => {
-  const [ToDoItems, SetToDoItems] = useState(startTodoItems);
+  const url = "http://localhost:3000";
+
+  const [ToDoItems, SetToDoItems] = useState(null);
   const [newItem, setNewItem] = useState("");
+  const getToDos = () => {
+    fetch(`${url}/todo?user=1`)
+      .then((data) => data.json())
+      .then((todos) => {
+        SetToDoItems(todos);
+      })
+      .catch((error) => console.error(error));
+  };
+  const addTodo = (todo) => {
+    fetch(`${url}/todo`, {
+      method: "POST",
+      body: JSON.stringify(todo),
+    })
+      .then((res) => {
+        if (res.ok === true) {
+          getToDos();
+        }
+      })
+      .catch((error) => console.error(error));
+  };
+  const updateToDo = (id, completed) => {
+    fetch(`${url}/todo/${id}`, {
+      method: "PATCH",
+      body: JSON.stringify({ completed }),
+    }).then((res) => {
+      if (res.ok === true) getToDos();
+    });
+  };
   const AddToDoItem = (event) => {
     event.preventDefault();
+
     if (newItem !== "") {
-      SetToDoItems([
-        ...ToDoItems,
-        {
-          id: ToDoItems.length + 1,
-          title: newItem,
-          completed: false,
-        },
-      ]);
+      addTodo({
+        id: ToDoItems.length + 1, // TODO : server should set id
+        title: newItem,
+        completed: false,
+        user: 2,
+      });
       setNewItem("");
     }
   };
+  useEffect(() => {
+    getToDos();
+  }, []);
   return (
     <>
       <h1>TO DO:</h1>
@@ -35,28 +63,28 @@ export const ToDo = () => {
         />
         <button type="submit">Add Item</button>
       </form>
-      <ul>
-        {ToDoItems.map((item) => {
-          return (
-            <li
-              key={item.id}
-              onClick={() => {
-                let temp = ToDoItems.slice();
-                temp[item.id - 1].completed = !temp[item.id - 1].completed;
-                SetToDoItems(temp);
-              }}
-            >
-              <p
-                style={{
-                  textDecoration: item.completed ? "line-through" : "none",
+      {ToDoItems && (
+        <ul>
+          {ToDoItems.map((item) => {
+            return (
+              <li
+                key={item.id}
+                onClick={() => {
+                  updateToDo(item.id, !item.completed);
                 }}
               >
-                {item.title}
-              </p>
-            </li>
-          );
-        })}
-      </ul>
+                <p
+                  style={{
+                    textDecoration: item.completed ? "line-through" : "none",
+                  }}
+                >
+                  {item.title}
+                </p>
+              </li>
+            );
+          })}
+        </ul>
+      )}
     </>
   );
 };
