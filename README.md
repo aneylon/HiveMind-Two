@@ -5,16 +5,17 @@
 - [ ] Add Redux
 - [ ] Add MUI or other styling
 
-- [ ] Todo List
-- [ ] News List
-- [ ] Notes List
+- [x] Todo List
+- [x] News List
+- [x] Notes List
 - [ ] Card Component
+- [ ] TicTacToe
 
 - [ ] Auth
 
-  - [ ] Signin
-  - [ ] Signout
-  - [ ] Signup
+  - [x] Signin
+  - [x] Signout
+  - [x] Signup
 
 - [ ] Admin section
   - [ ] News - CRUD
