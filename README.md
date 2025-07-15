@@ -1,7 +1,8 @@
 # ToDo List
 
+- [ ] Add Error Boundary
 - [ ] Add Testing framework
-- [ ] Add Router
+- [x] Add Router
 - [ ] Add Redux
 - [ ] Add MUI or other styling
 
@@ -30,6 +31,7 @@
 - [React](https://react.dev/)
 - [Vite](https://vite.dev/)
 - [React Spinners](https://www.davidhu.io/react-spinners/)
+- [React Router](https://www.reactrouter.com)
 
 ## Development
 
