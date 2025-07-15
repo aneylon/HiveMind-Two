@@ -5,6 +5,7 @@
 - [x] Add Router
 - [ ] Add Redux
 - [ ] Add MUI or other styling
+- [ ] API files and error handling
 
 - [x] Todo List
 - [x] News List

@@ -1,23 +1,14 @@
 import { useState, useEffect } from "react";
 import { NewsCard } from "./NewsCard";
-import { PuffLoader } from "react-spinners";
 import { Loader } from "../Loaders";
+import { GetNews } from "../../API/NewsApi";
 
 export const NewsList = () => {
-  const url = "http://localhost:3000";
   const [newsItems, setNewsItems] = useState(null);
   useEffect(() => {
-    fetch(url + "/news")
-      .then((data) => {
-        return data.json();
-      })
-      .then((news) => {
-        console.log({ news });
-        setNewsItems(news);
-      })
-      .catch((error) => {
-        console.error(error);
-      });
+    GetNews()
+      .then((news) => setNewsItems(news))
+      .catch((error) => console.error);
   }, []);
   return (
     <div>

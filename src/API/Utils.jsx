@@ -17,7 +17,6 @@ export function authHeader() {
 }
 
 export function handleResponse(response) {
-  console.log({ response });
   if (response.ok) return response.json();
 
   const error = response.text();
