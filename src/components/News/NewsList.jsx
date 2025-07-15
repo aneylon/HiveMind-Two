@@ -22,7 +22,6 @@ export const NewsList = () => {
   return (
     <div>
       <h1>News List</h1>
-      <Loader />
       {!newsItems && <Loader />}
       {newsItems && (
         <ul>
