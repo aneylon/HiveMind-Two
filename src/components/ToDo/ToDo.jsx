@@ -1,38 +1,35 @@
 import { useEffect, useState } from "react";
+import { AddTodo, GetTodos, UpdateTodo } from "../../API/TodoApi";
 
 export const ToDo = () => {
   const url = "http://localhost:3000";
 
   const [ToDoItems, SetToDoItems] = useState(null);
   const [newItem, setNewItem] = useState("");
+
   const getToDos = () => {
-    fetch(`${url}/todo?user=1`)
-      .then((data) => data.json())
-      .then((todos) => {
-        SetToDoItems(todos);
-      })
+    GetTodos()
+      .then((todos) => SetToDoItems(todos))
       .catch((error) => console.error(error));
   };
+
   const addTodo = (todo) => {
-    fetch(`${url}/todo`, {
-      method: "POST",
-      body: JSON.stringify(todo),
-    })
+    AddTodo(todo)
       .then((res) => {
-        if (res.ok === true) {
-          getToDos();
-        }
+        getToDos();
       })
       .catch((error) => console.error(error));
   };
+
   const updateToDo = (id, completed) => {
-    fetch(`${url}/todo/${id}`, {
-      method: "PATCH",
-      body: JSON.stringify({ completed }),
-    }).then((res) => {
-      if (res.ok === true) getToDos();
-    });
+    UpdateTodo(id, completed)
+      .then((res) => {
+        console.log(res);
+        getToDos();
+      })
+      .catch((error) => console.error(error));
   };
+
   const AddToDoItem = (event) => {
     event.preventDefault();
 
