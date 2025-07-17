@@ -1,29 +1,18 @@
 import { useEffect, useState } from "react";
 import { Loader } from "../Loaders";
 import { Note } from "./Note";
+import { GetNotes, UpdateNote } from "../../API/NotesApi";
 
 export const NoteList = () => {
-  const url = "http://localhost:3000";
-
   const [notes, setNotes] = useState(null);
   const getNotes = () => {
-    fetch(`${url}/note`)
-      .then((data) => data.json())
-      .then((notes) => {
-        setNotes(notes);
-      })
+    GetNotes()
+      .then((notes) => setNotes(notes))
       .catch((error) => console.error(error));
   };
   const updateNote = (note) => {
-    fetch(`${url}/note/${note.id}`, {
-      method: "PUT",
-      body: JSON.stringify(note),
-    })
-      .then((res) => {
-        if (res.ok === true) {
-          getNotes();
-        }
-      })
+    UpdateNote(note)
+      .then((res) => getNotes())
       .catch((error) => console.error(error));
   };
 
