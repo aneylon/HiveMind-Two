@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "doIt": "run-p dev devServer",
+    "both": "run-p dev devServer",
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",

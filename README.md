@@ -11,7 +11,7 @@
 - [x] News List
 - [x] Notes List
 - [ ] Card Component
-- [ ] TicTacToe
+- [x] TicTacToe
 
 - [ ] Auth
 
@@ -26,6 +26,7 @@
 
 - To run the front end. `npm run dev`
 - To run the development server `npm run devServe`
+- To run both together run `npm run both`
 
 # Resources
 
