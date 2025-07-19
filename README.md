@@ -1,11 +1,13 @@
 # ToDo List
 
+- [x] Add Toasts
 - [ ] Add Error Boundary
 - [ ] Add Testing framework
 - [x] Add Router
 - [ ] Add Redux
 - [ ] Add MUI or other styling
 - [ ] API files and error handling
+- [ ] Date Formatting
 
 - [x] Todo List
 - [x] News List
@@ -20,7 +22,7 @@
   - [x] Signup
 
 - [ ] Admin section
-  - [ ] News - CRUD
+  - [x] News - CRUD
 
 # Running the project
 

@@ -7,6 +7,7 @@ import { About } from "./components/About/About";
 import { FAQ } from "./components/FAQ/FAQ";
 import { Tools } from "./components/Tools/Tools";
 import { NotFound } from "./components/NotFound/FourOhFour";
+import { ToastContainer } from "react-toastify";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path="/*" element={<NotFound />} />
       </Routes>
       <Outlet />
+      <ToastContainer theme="dark" />
     </>
   );
 }
